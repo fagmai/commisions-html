@@ -6,7 +6,7 @@
     --tertiary-color: beige;
     --quartenary-color: gray;
 
-    --priamry-font: 'Kanit', sans-serif;
+    --primary-font: 'Kanit', sans-serif;
     --secondary-font: 'Caveat', cursive;
 }
 
@@ -32,11 +32,17 @@ body {
 }
 
 .heading__menu__link {
-    font-family: var(--priamry-font);
+    font-family: var(--primary-font);
     font-size: 24px;
     font-weight: 600;
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+.heading__menu__link:hover {
+    transform: scale(1.2);
+    color: rgb(141, 14, 62);
+    /* depois coloca a cor que quiser se gostar. */
 }
 
 .presentation {
@@ -51,11 +57,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .presentation__content__title {
     font-size: 36px;
-    font-family: var(--priamry-font);
+    font-family: var(--primary-font);
+}
+
+.drawing {
+    position: absolute;
+    z-index: 1;
+    right: 1%;
+    opacity: 0.8;
 }
 
 .emphasis-title {
@@ -76,7 +91,7 @@ body {
 }
 
 .presentation__links__contact {
-    font-family: var(--priamry-font);
+    font-family: var(--primary-font);
     font-weight: 600;
     font-size: 24px;
 }
@@ -94,7 +109,7 @@ body {
     padding: 21.5px 0;
     text-decoration: none;
     color: var(--secondary-color);
-    font-family: var(--priamry-font);
+    font-family: var(--primary-font);
 }
 
 .presentation__links__link:hover {
